@@ -11,6 +11,11 @@
 
 This application is an example of both frontend and smart contract implmentation of lx/ly bridge for ERC20 token bridging.
 
+![screenshot](./docs/Screenshot%202023-09-21%20at%2012.20.33%20AM.png)
+`Frontend`
+![screenshot2](./docs/Screenshot%202023-09-21%20at%2012.23.38%20AM.png)
+`Claim Function Listener`
+
 ## Setup
 
 #### Frontend
