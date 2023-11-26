@@ -20,7 +20,7 @@ const { chains, publicClient, webSocketPublicClient } = configureChains(
   [publicProvider()]
 );
 
-const projectId = "4449f503d38fa7e713592dd9a23d4727";
+const projectId = "WALLET_CONNECT_PROJECT_ID";
 
 const { wallets } = getDefaultWallets({
   appName: "LX/LY Bridge Prototype",

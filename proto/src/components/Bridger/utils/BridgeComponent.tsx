@@ -59,9 +59,22 @@ export default function BridgeComponent() {
               parseUnits(value.toString(), 18),
             ],
           });
-          write?.({
-            args: [address, parseUnits(value.toString(), 18), true],
-          });
+          // ! Wait for first transaction to be done
+          // * =========================================================
+          // * Not the best practise to follow for app in production
+          // * =========================================================
+          // * Use wait for transaction in case of deployment in production :
+          // * - get the hash of transaction
+          // * - use the waitForTransaction function to check the status
+          // * - If Txn == Success :
+          // *      then proceed to next transaction
+          // * - else :
+          // *      then revert and show error
+          setTimeout(() => {
+            write?.({
+              args: [address, parseUnits(value.toString(), 18), true],
+            });
+          }, 15000);
         }}
       >
         Bridge Tokens (göETH &gt; zkEVMTestnet)
